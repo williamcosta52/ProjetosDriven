@@ -1,144 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&display=swap");
 
 .container {
-background-color: #E5E5E5;
-width: 414px;
-height: 1040px;
-margin-top: 90px;
-overflow: hidden;
+  background-color: #e5e5e5;
+  width: 414px;
+  height: 1040px;
+  margin-top: 90px;
+  overflow: hidden;
 }
 header {
-height: 92px;
-width: 100%;
-background-color: #CF2B2B;
-display: flex;
-align-items: center;
-position: fixed;
-top: 0;
-left: 0;
+  height: 92px;
+  width: 100%;
+  background-color: #cf2b2b;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 header h1 {
-font-weight: 400;
-font-size: 44px;
-line-height: 55px;
-letter-spacing: -0.012em;
-color: #FFFFFF;
-padding-left: 21px;
-font-family: 'Righteous';
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 55px;
+  letter-spacing: -0.012em;
+  color: #ffffff;
+  padding-left: 21px;
+  font-family: "Righteous";
 }
 header h2 {
-font-weight: 400;
-font-size: 18px;
-line-height: 21px;
-padding-left: 21px;
-color: #FFFFFF;
-font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  padding-left: 21px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
 }
 .h1titulo {
-font-weight: 400;
-font-size: 26px;
-line-height: 32px;
-letter-spacing: 0.018em;
-color: #333333;
-font-family: 'Righteous';
-margin-top: 31px;
-margin-bottom: 10px;
-margin-left: 15px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: 0.018em;
+  color: #333333;
+  font-family: "Righteous";
+  margin-top: 31px;
+  margin-bottom: 10px;
+  margin-left: 15px;
 }
 .cardapios {
-    overflow-x: scroll;
+  overflow-x: scroll;
 }
 .cardapio {
-    box-sizing: border-box;
-    width: 600px;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 .cardapio div {
-    background-color: #FFFFFF;
-    height: 216px;
-    width: 172px;
-    border-radius: 10px;
-    margin: 8px;
-    margin-left: 15px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-left: 5px;
-    padding-top: 18px;
+  background-color: #ffffff;
+  height: 216px;
+  width: 172px;
+  border-radius: 10px;
+  margin: 8px;
+  margin-left: 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 5px;
+  padding-top: 18px;
+  position: relative;
 }
 .cardapio div img {
-    width: 144px;
-    height: 87px;
-    margin-left: 8px;
+  width: 144px;
+  height: 87px;
+  margin-left: 8px;
 }
 .cardapio div h2 {
-margin-top: 8px;
-margin-left: 8px;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-color: #333333;
-font-family: 'Roboto', sans-serif;
+  margin-top: 8px;
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
 }
 .cardapio div h3 {
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-margin-top: 6px;
-margin-left: 8px;
-color: #000000;
-font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 6px;
+  margin-left: 8px;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
 }
 .cardapio div p {
-font-weight: 300;
-font-size: 15px;
-line-height: 18px;
-margin-top: 6px;
-margin-left: 8px;
-color: #A6A6A6;
-font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 6px;
+  margin-left: 8px;
+  color: #a6a6a6;
+  font-family: "Roboto", sans-serif;
 }
 .menu-inferior {
-width: 414px;
-height: 92px;
-position: fixed;
-bottom: 30px;
-left: 0;
-background-color: #FFFFFF;
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 414px;
+  height: 92px;
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fechar-pedido button {
-background-color: #CBCBCB;
-width: 364px;
-height: 61px;
-border: none;
-border-radius: 50px;
-font-weight: 400;
-font-size: 20px;
-line-height: 23px;
-letter-spacing: 0.018em;
-color: #FFFFFF;
-font-family: 'Roboto', sans-serif;
-text-align: start;
-display: flex;
-align-items: center;
-flex-wrap: wrap;
+  background-color: #cbcbcb;
+  width: 364px;
+  height: 61px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.018em;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .escondido {
-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
-border-radius: 9px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 0px 5px #32b72f;
+  border-radius: 9px;
 }
 .escondidobebida {
-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
-border-radius: 9px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 0px 5px #32b72f;
+  border-radius: 9px;
 }
 .escondidosobremesa {
-box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
-border-radius: 9px;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25),
+    inset 0px 0px 0px 5px #32b72f;
+  border-radius: 9px;
+}
+.botaopedido {
+  background-color: #32b72f !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ion-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 19px;
+  color: #32b72f;
+  opacity: 0;
 }
