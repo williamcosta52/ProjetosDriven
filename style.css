@@ -27,7 +27,7 @@ header h1 {
   letter-spacing: -0.012em;
   color: #ffffff;
   padding-left: 21px;
-  font-family: "Righteous";
+  font-family: "Righteous", cursive;
 }
 header h2 {
   font-weight: 400;
@@ -43,7 +43,7 @@ header h2 {
   line-height: 32px;
   letter-spacing: 0.018em;
   color: #333333;
-  font-family: "Righteous";
+  font-family: "Righteous", cursive;
   margin-top: 31px;
   margin-bottom: 10px;
   margin-left: 15px;
@@ -52,7 +52,6 @@ header h2 {
   overflow-x: scroll;
 }
 .cardapio {
-  box-sizing: border-box;
   width: 600px;
   display: flex;
   justify-content: space-between;
