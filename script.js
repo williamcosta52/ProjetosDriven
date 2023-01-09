@@ -1,5 +1,12 @@
 let selecionadoprato;
+let selecionadabebida;
+let selecionadasobremesa;
+let iconeBebida;
+let iconeSobremesa;
 let icone;
+let valorTotal = 0;
+
+let pedidos = [];
 
 function SelecaoCardapio(selecionadoverde) {
   const botaoanterior = document.querySelector(".escondido");
@@ -10,7 +17,7 @@ function SelecaoCardapio(selecionadoverde) {
 
   selecionadoverde.classList.add("escondido");
 
-  selecionadoprato = selecionadoverde.innerHTML;
+  selecionadoprato = 1;
 
   const ion = selecionadoverde.querySelector("ion-icon");
   if (icone !== undefined && icone.style.opacity === "1") {
@@ -21,9 +28,6 @@ function SelecaoCardapio(selecionadoverde) {
   verificarPratoSelecionado();
 } // <-- aqui termina a função SelecaoCardapio
 
-let selecionadabebida;
-let iconeBebida;
-
 function cardapioBebida(selecionadobebida) {
   const bebidaAnterior = document.querySelector(".escondidobebida");
 
@@ -33,7 +37,7 @@ function cardapioBebida(selecionadobebida) {
 
   selecionadobebida.classList.add("escondidobebida");
 
-  selecionadabebida = selecionadobebida.innerHTML;
+  selecionadabebida = 1;
 
   const ion = selecionadobebida.querySelector("ion-icon");
   if (iconeBebida !== undefined && iconeBebida.style.opacity === "1") {
@@ -45,9 +49,6 @@ function cardapioBebida(selecionadobebida) {
   verificarPratoSelecionado();
 } // <-- aqui termina a função cardapioBebida
 
-let selecionadasobremesa;
-let iconeSobremesa;
-
 function cardapiosobremesa(selecionadosobremesa) {
   const sobreAnterior = document.querySelector(".escondidosobremesa");
 
@@ -57,7 +58,7 @@ function cardapiosobremesa(selecionadosobremesa) {
 
   selecionadosobremesa.classList.add("escondidosobremesa");
 
-  selecionadasobremesa = selecionadosobremesa.innerHTML;
+  selecionadasobremesa = 1;
 
   const ion = selecionadosobremesa.querySelector("ion-icon");
   if (iconeSobremesa !== undefined && iconeSobremesa.style.opacity === "1") {
@@ -75,18 +76,57 @@ function verificarPratoSelecionado() {
     selecionadabebida !== undefined &&
     selecionadasobremesa !== undefined
   ) {
-    const botaoverde = document.querySelector(".botao");
+    const botaoverde = document.querySelector(".menu-inferiorVerde");
 
-    botaoverde.innerHTML = "Fechar Pedido";
-
-    botaoverde.classList.add("botaopedido");
+    botaoverde.classList.remove("botaoescondido");
   }
 }
-function ativarBotaoComprar(ativarbotaoverde) {
-  if (
-    selecionadoprato !== undefined &&
-    selecionadabebida !== undefined &&
-    selecionadasobremesa !== undefined
-  ) {
-  }
+
+function calcularpreco() {
+  const precoprato = document.querySelector(
+    ".cardapios  .escondido  span"
+  ).innerHTML;
+
+  const precobebida = document.querySelector(
+    ".cardapios .escondidobebida span"
+  ).innerHTML;
+
+  const precosobremesa = document.querySelector(
+    ".cardapios .escondidosobremesa span"
+  ).innerHTML;
+
+  valorTotal = (
+    Number(precoprato.replace(",", ".")) +
+    Number(precobebida.replace(",", ".")) +
+    Number(precosobremesa.replace(",", "."))
+  ).toFixed(2);
+}
+function titulosPedido() {
+  const nomeprato = document.querySelector(
+    ".cardapios .escondido h2"
+  ).innerHTML;
+
+  const nomebebida = document.querySelector(
+    ".cardapios .escondidobebida h2"
+  ).innerHTML;
+
+  const nomesobremesa = document.querySelector(
+    ".cardapios .escondidosobremesa h2"
+  ).innerHTML;
+
+  pedidos.push(nomeprato);
+  pedidos.push(nomebebida);
+  pedidos.push(nomesobremesa);
+}
+function chamarZap() {
+  calcularpreco();
+  titulosPedido();
+  let url = `Olá, gostaria de fazer o pedido:
+  - Prato: ${pedidos[0]}
+  - Bebida: ${pedidos[1]}
+  - Sobremesa: ${pedidos[2]}
+  Total: R$ ${valorTotal.replace(".", ",")}`;
+
+  let whats = "https://wa.me/?text=" + encodeURIComponent(url);
+  return (window.location = whats);
 }
